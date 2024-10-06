@@ -1,47 +1,47 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\mlugo\\Desktop\\ML-Universidad\\Programacion de Software\\proyectosVSCODE\\BlazorFrontEnd\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\mlugo\\Desktop\\ML-Universidad\\Programacion de Software\\proyectosVSCODE\\BlazorFrontEnd\\obj\\Debug\\net8.0\\compressed\\f4ehp56scf.gz",
+      "Id": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\obj\\Debug\\net8.0\\compressed\\f4ehp56scf.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\mlugo\\Desktop\\ML-Universidad\\Programacion de Software\\proyectosVSCODE\\BlazorFrontEnd\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorFrontEnd.styles.css",
+      "Id": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BlazorFrontEnd.styles.css",
       "PackagePath": "staticwebassets\\BlazorFrontEnd.styles.css"
     },
     {
-      "Id": "C:\\Users\\mlugo\\Desktop\\ML-Universidad\\Programacion de Software\\proyectosVSCODE\\BlazorFrontEnd\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "C:\\Users\\mlugo\\Desktop\\ML-Universidad\\Programacion de Software\\proyectosVSCODE\\BlazorFrontEnd\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\mlugo\\Desktop\\ML-Universidad\\Programacion de Software\\proyectosVSCODE\\BlazorFrontEnd\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\mlugo\\Desktop\\ML-Universidad\\Programacion de Software\\proyectosVSCODE\\BlazorFrontEnd\\wwwroot\\css\\crud-styles.css",
+      "Id": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\wwwroot\\css\\crud-styles.css",
       "PackagePath": "staticwebassets\\css\\crud-styles.css"
     },
     {
-      "Id": "C:\\Users\\mlugo\\Desktop\\ML-Universidad\\Programacion de Software\\proyectosVSCODE\\BlazorFrontEnd\\wwwroot\\favicon.png",
+      "Id": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "C:\\Users\\mlugo\\Desktop\\ML-Universidad\\Programacion de Software\\proyectosVSCODE\\BlazorFrontEnd\\wwwroot\\icon-192.png",
+      "Id": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\mlugo\\Desktop\\ML-Universidad\\Programacion de Software\\proyectosVSCODE\\BlazorFrontEnd\\wwwroot\\index.html",
+      "Id": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\mlugo\\Desktop\\ML-Universidad\\Programacion de Software\\proyectosVSCODE\\BlazorFrontEnd\\wwwroot\\sample-data\\weather.json",
+      "Id": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {
