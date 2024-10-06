@@ -1029,3 +1029,4 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\FrontBlazor\obj\Debug\net8
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\FrontBlazor\obj\Debug\net8.0\refint\FrontBlazor.dll
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\FrontBlazor\obj\Debug\net8.0\FrontBlazor.pdb
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\FrontBlazor\obj\Debug\net8.0\ref\FrontBlazor.dll
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\FrontBlazor\obj\Debug\net8.0\FrontBlazor.sourcelink.json
