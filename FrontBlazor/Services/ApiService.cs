@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Text.Json;
 
-namespace FrontBlazor.Services
+namespace BlazorFrontEnd.Services
 {
     /// <summary>
     /// Servicio para manejar las operaciones CRUD con una API externa.
@@ -40,16 +40,16 @@ namespace FrontBlazor.Services
                 response.EnsureSuccessStatusCode();
                 // Lee el contenido de la respuesta como string
                 var content = await response.Content.ReadAsStringAsync();
-
+                
                 // Configura opciones para la deserialización JSON
                 var options = new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true // Permite que los nombres de propiedades sean case-insensitive
                 };
-
+                
                 // Deserializa el contenido JSON a una lista de diccionarios
                 // Si la deserialización falla, devuelve una lista vacía
-                return JsonSerializer.Deserialize<List<Dictionary<string, object>>>(content, options)
+                return JsonSerializer.Deserialize<List<Dictionary<string, object>>>(content, options) 
                     ?? new List<Dictionary<string, object>>();
             }
             catch (HttpRequestException e)
