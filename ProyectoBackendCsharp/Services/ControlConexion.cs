@@ -31,7 +31,7 @@ namespace ProyectoBackendCsharp.Services
             {
                 // Obtiene el proveedor de base de datos desde la configuración, lanza una excepción si no está configurado.
                 string provider = _configuration["DatabaseProvider"] ?? throw new InvalidOperationException("DatabaseProvider not configured.");
-                
+
                 // Obtiene la cadena de conexión basada en el proveedor de base de datos.
                 string? connectionString = _configuration.GetConnectionString(provider);
 
@@ -53,6 +53,7 @@ namespace ProyectoBackendCsharp.Services
                         // Abre la conexión para SQL Server.
                         _dbConnection = new SqlConnection(connectionString);
                         _dbConnection.Open();
+                        Console.WriteLine("Conexión exitosa a la base de datos.");
                         break;
                     default:
                         // Lanza una excepción si el proveedor no es compatible.
@@ -73,14 +74,14 @@ namespace ProyectoBackendCsharp.Services
             {
                 // Verifica si el nombre del archivo termina en .mdf, si no, lo agrega.
                 string dbFileName = archivoDb.EndsWith(".mdf") ? archivoDb : archivoDb + ".mdf";
-                
+
                 // Define la ruta completa al archivo de base de datos en la carpeta App_Data.
                 string appDataPath = Path.Combine(_env.ContentRootPath, "App_Data");
                 string filePath = Path.Combine(appDataPath, dbFileName);
 
                 // Crea la cadena de conexión para LocalDB con AttachDbFilename.
                 string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={filePath};Integrated Security=True";
-                
+
                 // Abre la conexión a la base de datos LocalDB.
                 _dbConnection = new SqlConnection(connectionString);
                 _dbConnection.Open();
@@ -201,7 +202,7 @@ namespace ProyectoBackendCsharp.Services
             {
                 // Obtiene el proveedor de base de datos desde la configuración, lanza una excepción si no está configurado.
                 string provider = _configuration["DatabaseProvider"] ?? throw new InvalidOperationException("DatabaseProvider not configured.");
-                
+
                 // Crea un parámetro adecuado según el proveedor de base de datos.
                 return provider switch
                 {

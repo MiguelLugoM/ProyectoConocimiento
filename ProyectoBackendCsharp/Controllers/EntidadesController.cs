@@ -17,7 +17,7 @@ namespace ProyectoBackendCsharp.Controllers
 {
     [Route("api/{projectName}/{tableName}")] // Define la ruta de la API para este controlador.
     [ApiController] // Indica que esta clase es un controlador de API.
-    [Authorize] // Requiere autorización para acceder a los métodos de este controlador.
+    //[Authorize] // Requiere autorización para acceder a los métodos de este controlador.
     public class EntidadesController : ControllerBase // Define un controlador llamado `EntidadesController`.
     {
         private readonly ControlConexion controlConexion; // Declara una instancia del servicio ControlConexion.
@@ -74,10 +74,10 @@ namespace ProyectoBackendCsharp.Controllers
             try
             {
                 string provider = _configuration["DatabaseProvider"] ?? throw new InvalidOperationException("DatabaseProvider not configured."); // Obtiene el proveedor de base de datos desde la configuración.
-                
+
                 string query;
                 DbParameter[] parameters;
-                
+
                 // Define la consulta SQL y los parámetros para SQL Server y LocalDB.
                 query = "SELECT data_type FROM information_schema.columns WHERE table_name = @tableName AND column_name = @columnName";
                 parameters = new DbParameter[]
@@ -263,7 +263,7 @@ namespace ProyectoBackendCsharp.Controllers
                 // Verifica si hay un campo de contraseña en los datos, y si lo hay, lo hashea.
                 var passwordKeys = new[] { "password", "contrasena", "passw" };  // Lista de posibles nombres para campos de contraseña.
                 var passwordKey = propiedades.Keys.FirstOrDefault(k => passwordKeys.Any(pk => k.IndexOf(pk, StringComparison.OrdinalIgnoreCase) >= 0));  // Busca si alguno de los campos es una contraseña.
-                
+
                 if (passwordKey != null)  // Si se encontró un campo de contraseña.
                 {
                     var plainPassword = propiedades[passwordKey]?.ToString();  // Obtiene el valor de la contraseña.
@@ -315,7 +315,7 @@ namespace ProyectoBackendCsharp.Controllers
                 // Verifica si hay un campo de contraseña en los datos, y si lo hay, lo hashea.
                 var passwordKeys = new[] { "password", "contrasena", "passw" }; // Lista de posibles nombres para campos de contraseña.
                 var passwordKey = propiedades.Keys.FirstOrDefault(k => passwordKeys.Any(pk => k.IndexOf(pk, StringComparison.OrdinalIgnoreCase) >= 0)); // Busca si alguno de los campos es una contraseña.
-                
+
                 if (passwordKey != null) // Si se encontró un campo de contraseña.
                 {
                     var plainPassword = propiedades[passwordKey]?.ToString(); // Obtiene el valor de la contraseña.

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YGH4+0JfBtxHcvHKMg5PDMPSOXnUPAVEgJBYL3K+u9c=",
+  "Hash": "T+0B6AC29KSJ7uMjWcVA4UInjwAkxszftM1YA5zv5d0=",
   "Source": "ProyectoBackendCsharp",
   "BasePath": "_content/ProyectoBackendCsharp",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "ProyectoBackendCsharp\\wwwroot",
       "Source": "ProyectoBackendCsharp",
-      "ContentRoot": "C:\\Users\\mlugo\\Desktop\\Universidad\\Programacion de Software\\ProyectoBackendCsharp\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\ProyectoBackendCsharp\\wwwroot\\",
       "BasePath": "_content/ProyectoBackendCsharp",
       "Pattern": "**"
     }
