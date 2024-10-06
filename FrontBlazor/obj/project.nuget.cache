@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "HN5e2nHuDhE=",
+  "dgSpecHash": "4IwR6YqHgdg=",
   "success": true,
   "projectFilePath": "C:\\Users\\mlugo\\Desktop\\ProyectoProgramacionDeSoftware\\FrontBlazor\\FrontBlazor.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\mlugo\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512",
     "C:\\Users\\mlugo\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.8\\microsoft.aspnetcore.authorization.8.0.8.nupkg.sha512",
     "C:\\Users\\mlugo\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.8\\microsoft.aspnetcore.components.8.0.8.nupkg.sha512",
     "C:\\Users\\mlugo\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.8\\microsoft.aspnetcore.components.analyzers.8.0.8.nupkg.sha512",
