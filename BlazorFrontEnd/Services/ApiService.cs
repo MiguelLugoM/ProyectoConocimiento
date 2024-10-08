@@ -40,16 +40,16 @@ namespace BlazorFrontEnd.Services
                 response.EnsureSuccessStatusCode();
                 // Lee el contenido de la respuesta como string
                 var content = await response.Content.ReadAsStringAsync();
-                
+
                 // Configura opciones para la deserialización JSON
                 var options = new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true // Permite que los nombres de propiedades sean case-insensitive
                 };
-                
+
                 // Deserializa el contenido JSON a una lista de diccionarios
                 // Si la deserialización falla, devuelve una lista vacía
-                return JsonSerializer.Deserialize<List<Dictionary<string, object>>>(content, options) 
+                return JsonSerializer.Deserialize<List<Dictionary<string, object>>>(content, options)
                     ?? new List<Dictionary<string, object>>();
             }
             catch (HttpRequestException e)
@@ -92,7 +92,7 @@ namespace BlazorFrontEnd.Services
         /// <param name="id">Identificador de la entidad a editar.</param>
         /// <param name="entity">Diccionario que representa la entidad actualizada.</param>
         /// <returns>True si la operación fue exitosa, False en caso contrario.</returns>
-        public async Task<bool> EditEntityAsync(string endpoint, string id, Dictionary<string, object> entity)
+        public async Task<bool> EditEntityAsync(string endpoint, int id, Dictionary<string, object> entity)
         {
             try
             {
@@ -116,7 +116,7 @@ namespace BlazorFrontEnd.Services
         /// <param name="endpoint">URL base del endpoint de la API.</param>
         /// <param name="id">Identificador de la entidad a eliminar.</param>
         /// <returns>True si la operación fue exitosa, False en caso contrario.</returns>
-        public async Task<bool> DeleteEntityAsync(string endpoint, string id)
+        public async Task<bool> DeleteEntityAsync(string endpoint, int id)
         {
             try
             {
