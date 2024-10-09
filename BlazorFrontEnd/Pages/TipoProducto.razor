@@ -26,14 +26,14 @@ este componente Blazor se carga y se representa en la página.
                     </div>
                     <div class="col-sm-6">
                         <a href="#addTipoProductoModal" class="btn btn-success" data-bs-toggle="modal" @onclick="() => PrepareForAddOrEdit()">
-                            <i class="material-icons">&#xE147;</i> <span>Añadir Nueva Persona</span>
+                            <i class="material-icons">&#xE147;</i> <span>Añadir Nuevo Producto</span>
                         </a>
-                        <!-- Botón que abre el modal para añadir una nueva persona -->
+                        <!-- Botón que abre el modal para añadir una nuevo producto -->
  
                         <a href="#consultarTipoProductoModal" class="btn btn-success" data-bs-toggle="modal" @onclick="PrepareForConsulta">
-                            <i class="material-icons">&#xE8B6;</i> <span>Consultar Persona</span>
+                            <i class="material-icons">&#xE8B6;</i> <span>Consultar Producto</span>
                         </a>
-                        <!-- Botón que abre el modal para consultar una persona existente -->
+                        <!-- Botón que abre el modal para consultar un producto existente -->
                     </div>
                 </div>
             </div>
@@ -94,127 +94,6 @@ este componente Blazor se carga y se representa en la página.
     </div>
 </div>
  
-<!-- Modal para Añadir/Editar TipoProducto -->
-<div class="modal fade" id="addTipoProductoModal" tabindex="-1" role="dialog" aria-labelledby="addTipoProductoModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <EditForm Model="@currentTipoProducto" OnValidSubmit="SaveTipoProducto">
-                <DataAnnotationsValidator />
-                <!-- Valida los campos del formulario usando anotaciones de datos en C# -->
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addTipoProductoModalLabel">@(isNewTipoProducto ? "Añadir" : "Editar") TipoProducto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Campos del formulario para ingresar los datos del tipo de producto -->
-                    <div class="form-group">
-                        <label>Id</label>
-                        <InputNumber class="form-control" @bind-Value="id" />
-                        <ValidationMessage For="@(() => id)" />
-                    </div>
-                    <div class="form-group">
-                        <label>Categoria</label>
-                        <InputText class="form-control" @bind-Value="categoria" />
-                        <ValidationMessage For="@(() => categoria)" />
-                    </div>
-                    <div class="form-group">
-                        <label>Clase</label>
-                        <InputText class="form-control" @bind-Value="clase" />
-                        <ValidationMessage For="@(() => clase)" />
-                    </div>
-                    <div class="form-group">
-                        <label>Nombre</label>
-                        <InputText class="form-control" @bind-Value="nombre" />
-                        <ValidationMessage For="@(() => nombre)" />
-                    </div>
-                    <div class="form-group">
-                        <label>Tipologia</label>
-                        <InputText class="form-control" @bind-Value="tipologia" />
-                        <ValidationMessage For="@(() => tipologia)" />
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">@(isNewTipoProducto ? "Añadir" : "Guardar")</button>
-                </div>
-            </EditForm>
-        </div>
-    </div>
-</div>
-
-<!-- Modal para Eliminar Tipo de producto -->
-<div class="modal fade" id="deleteTipoProductoModal" tabindex="-1" role="dialog" aria-labelledby="deleteTipoProductoModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="deleteTipoProductoModalLabel">Eliminar Tipo de producto</h5>
-                <!-- Título del modal para eliminar un tipo de producto -->
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>¿Está seguro de que desea eliminar este tipo de producto?</p>
-                <p class="text-warning"><small>Esta acción no se puede deshacer.</small></p>
-                <!-- Mensaje de advertencia para la eliminación -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-danger" @onclick="DeleteTipoProducto">Eliminar</button>
-                <!-- Botón para confirmar la eliminación de la persona -->
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal para Consultar tipo de producto -->
-<div class="modal fade" id="ConsultarTipoProducto" tabindex="-1" role="dialog" aria-labelledby="ConsultarTipoProductoLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="ConsultarTipoProductoLabel">Consultar Tipo de persona</h5>
-                <!-- Título del modal para consultar una tipo de producto -->
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Campos para ingresar el id y mostrar la información del tipo de producto consultada -->
-                <div class="form-group">
-                    <label>Id</label>
-                    <input type="text" class="form-control" @bind="consultaId" @bind:event="oninput" />
-                    <!-- Campo para ingresar el id del tipo de producto a consultar -->
-                </div>
-                <div class="form-group">
-                    <label>Categoria</label>
-                    <input type="text" class="form-control" @bind="consultaCategoria" readonly />
-                    <!-- Campo para mostrar la categoria del tipo de producto consultada, es de solo lectura -->
-                </div>
-                <div class="form-group">
-                    <label>Clase</label>
-                    <input type="text" class="form-control" @bind="consultaClase" readonly />
-                    <!-- Campo para mostrar la clase de tipo de producto consultada, es de solo lectura -->
-                </div>
-                <div class="form-group">
-                    <label>Nombre</label>
-                    <input type="text" class="form-control" @bind="consultaNombre" readonly />
-                    <!-- Campo para mostrar el nombre de tipo de producto consultada, es de solo lectura -->
-                </div>
-                <div class="form-group">
-                    <label>Tipologia</label>
-                    <input type="text" class="form-control" @bind="consultaTipologia" readonly />
-                    <!-- Campo para mostrar la tipologia de tipo de producto consultada, es de solo lectura -->
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" @onclick="ConsultarTipoProducto">Consultar</button>
-                <!-- Botón para realizar el tipo de producto con el id ingresado -->
-                <button type="button" class="btn btn-warning" @onclick="ModificarTipoProductoConsultada" disabled="@(!tipoProductoEncontrada)">Modificar</button>
-                <!-- Botón para modificar el tipo de producto consultada si fue encontrada -->
-                <button type="button" class="btn btn-danger" @onclick="EliminarTipoProductoConsultada" disabled="@(!tipoProductoEncontrada)">Eliminar</button>
-                <!-- Botón para eliminar el tipo de producto consultada si fue encontrada -->
-            </div>
-        </div>
-    </div>
-</div>
-
 @code {
    
     private List<Dictionary<string, object>> tipoProductoList = new List<Dictionary<string, object>>();
