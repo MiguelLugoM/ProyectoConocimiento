@@ -25,7 +25,7 @@ este componente Blazor se carga y se representa en la página.
                         <!-- Título de la tabla que indica que se trata de la gestión de Tipo de Productos -->
                     </div>
                     <div class="col-sm-6">
-                        <a href="#addTipoProductoModal" class="btn btn-success" data-bs-toggle="modal" @onclick="() => PrepareForAddOrEdit()">
+                        <a href="#addTipoProductoModal" class="btn btn-success" data-bs-toggle="modal" @onclick="() => PrepareForAdd()">
                             <i class="material-icons">&#xE147;</i> <span>Añadir Nueva Tipo de producto</span>
                         </a>
                         <!-- Botón que abre el modal para añadir una nueva persona -->
@@ -75,7 +75,7 @@ este componente Blazor se carga y se representa en la página.
                                 <td>@tipoProducto["tipologia"]</td>
                                 <!-- Muestra la tipologia del tipo de producto -->
                                 <td>
-                                    <a href="#editPersonaModal" class="edit" data-bs-toggle="modal" @onclick="() => PrepareForAddOrEdit(tipoProducto)">
+                                    <a href="editTipoProductoModal" class="edit" data-bs-toggle="modal" @onclick="() => PrepareForEdit(tipoProducto)">
                                         <i class="material-icons" data-bs-toggle="tooltip" title="Editar">&#xE254;</i>
                                     </a>
                                     <!-- Botón para editar el tipo de producto -->
@@ -94,7 +94,8 @@ este componente Blazor se carga y se representa en la página.
     </div>
 </div>
 
-<!-- Modal para Editar TipoProducto -->
+
+<!-- Modal para Editar TipoProducto desde lapiz -->
 <div class="modal fade" id="editTipoProductoModal" tabindex="-1" role="dialog" aria-labelledby="editTipoProductoModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -108,7 +109,7 @@ este componente Blazor se carga y se representa en la página.
                 <div class="modal-body">
                     <!-- Campos del formulario para ingresar los datos del tipo de producto -->
                     <div class="form-group">
-                        <label>Id</label>
+                        <label>Idcareverga</label>
                         <InputNumber class="form-control" @bind-Value="id" Disabled="true" />
                         <ValidationMessage For="@(() => id)" />
                     </div>
@@ -134,15 +135,15 @@ este componente Blazor se carga y se representa en la página.
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Donde me estan llamando</button>
                 </div>
             </EditForm>
         </div>
     </div>
 </div>
 
-<!-- Modal para Añadir TipoProducto -->
+<!-- Modal para Editar TipoProducto desde Consulta Tipo de producto -->
 <div class="modal fade" id="addTipoProductoModal" tabindex="-1" role="dialog" aria-labelledby="addTipoProductoModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -182,8 +183,8 @@ este componente Blazor se carga y se representa en la página.
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Añadir</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">añadir</button>
                 </div>
             </EditForm>
         </div>
@@ -313,7 +314,7 @@ este componente Blazor se carga y se representa en la página.
         // Método que se ejecuta al inicializar el componente. Carga la lista de personas desde la API.
     }
 
-        private void PrepareForAddOrEdit(Dictionary<string, object>? tipoProducto = null)
+        private void PrepareForAdd(Dictionary<string, object>? tipoProducto = null)
     {
         isNewTipoProducto = tipoProducto == null;
         // Si 'tipoProducto' es null, significa que estamos añadiendo una nuevo tipo de producto. De lo contrario, estamos editando.
@@ -330,13 +331,31 @@ este componente Blazor se carga y se representa en la página.
         JSRuntime.InvokeVoidAsync("showModal", "addTipoProductoModal");
         // Muestra el modal para añadir o editar Tipo de producto usando JavaScript.
     }
+    private void PrepareForEdit(Dictionary<string, object> tipoProducto = null)
+    {
+        isNewTipoProducto = tipoProducto == null;
+        // Si 'tipoProducto' es null, significa que estamos añadiendo una nuevo tipo de producto. De lo contrario, estamos editando.
+        currentTipoProducto = tipoProducto ?? new Dictionary<string, object>();
+        // Si 'tipoProducto' es null, inicializamos un nuevo diccionario. De lo contrario, usamos el diccionario del tipoProducto seleccionada.
 
-        private void PrepareForConsulta()
+        id = currentTipoProducto.TryGetValue("id", out var c) && c is int idValue ? idValue : 0;
+        categoria = currentTipoProducto.TryGetValue("categoria", out var n) ? n?.ToString() ?? "" : "";
+        clase = currentTipoProducto.TryGetValue("clase", out var e) ? e?.ToString() ?? "" : "";
+        nombre = currentTipoProducto.TryGetValue("nombre", out var t) ? t?.ToString() ?? "" : "";
+        tipologia = currentTipoProducto.TryGetValue("tipologia", out var f) ? f?.ToString() ?? "" : "";
+        // Extrae los valores de 'id', 'categoria', 'clase' , 'nombre' y 'tipologia' de 'currentTipoProducto' y los asigna a las variables correspondientes.
+
+        // Muestra el modal para editar el tipo de producto.
+        JSRuntime.InvokeVoidAsync("showModal", "editTipoProductoModal");
+    }
+
+    public void PrepareForConsulta()
     {
         consultaId = 0;
         consultaCategoria = "";
         consultaClase = "";
         consultaNombre = "";
+        consultaTipologia = "";
         tipoProductoEncontrado = false;
         // Limpia los campos de consulta y establece 'tipoProductoEncontrado' en false.
     }
@@ -432,7 +451,7 @@ este componente Blazor se carga y se representa en la página.
     }
     private async Task ModificarTipoProductoConsultada()
     {
-        PrepareForAddOrEdit(new Dictionary<string, object>
+        PrepareForAdd(new Dictionary<string, object>
         {
             ["id"] = consultaId,
             ["categoria"] = consultaCategoria,
@@ -461,64 +480,75 @@ este componente Blazor se carga y se representa en la página.
     {
         try
         {
+            // Actualiza 'currentTipoProducto' con los valores actuales de los campos de entrada.
             currentTipoProducto["id"] = id;
             currentTipoProducto["categoria"] = categoria;
             currentTipoProducto["clase"] = clase;
             currentTipoProducto["nombre"] = nombre;
             currentTipoProducto["tipologia"] = tipologia;
-            // Actualiza 'currentTipoProducto' con los valores actuales de los campos de entrada.
- 
+
             bool success;
+
+            // Llama a la API para añadir o editar el tipo de producto según corresponda.
             if (isNewTipoProducto)
             {
                 success = await ApiService.AddEntityAsync("api/BDCONOCIMIENTO/tipo_producto", currentTipoProducto);
                 await LoadTipoProducto();
-               
-                // Si estamos añadiendo una nueva tipo producto, llama a la API para añadir la nueva tipo de producto.
+                
             }
             else
             {
                 success = await ApiService.EditEntityAsync("api/BDCONOCIMIENTO/tipo_producto/id", id.ToString(), currentTipoProducto);
                 await LoadTipoProducto();
-                // Si estamos editando un tipo de producto existente, llama a la API para editarla.
+                // Si estamos editando una persona existente, llama a la API para editarla.
             }
- 
+
             if (success)
             {
- 
                 await JSRuntime.InvokeVoidAsync("hideModal", "addTipoProductoModal");
                 // Si la operación tiene éxito, cierra el modal.
- 
-                await LoadTipoProducto();
-                // Recarga la lista de tipo de producto para reflejar los cambios.
 
-                id = 0;
-                categoria = clase = nombre = tipologia = string.Empty;
-                currentTipoProducto = new Dictionary<string, object>();
-                isNewTipoProducto = true;
+                await JSRuntime.InvokeVoidAsync("hideModal", "editTipoProductoModal");
+
+                // Recarga la lista de tipo de productos para reflejar los cambios.
+                await LoadTipoProducto();
+
                 // Limpia los campos del formulario y restablece el estado.
- 
+                ResetForm();
+
                 StateHasChanged();
                
                 // Fuerza la actualización de la UI.
-               
-               await LoadTipoProducto();
- 
-                await JSRuntime.InvokeVoidAsync("alert", "Operación realizada con éxito1.");
-               
+
+                await LoadTipoProducto();
+
                 // Muestra un mensaje de éxito al usuario.
+                await JSRuntime.InvokeVoidAsync("alert", "Operación realizada con éxito.");
             }
             else
             {
-                await JSRuntime.InvokeVoidAsync("alert", "Error al guardar el tipo de producto. Por favor, intente nuevamente.");
                 // Si la operación falla, muestra un mensaje de error.
+                await JSRuntime.InvokeVoidAsync("alert", "Error al guardar el tipo de producto. Por favor, intente nuevamente.");
             }
         }
         catch (Exception ex)
         {
+            // Muestra un error en la consola y una alerta si hay una excepción durante el guardado.
             Console.WriteLine($"Error al guardar tipo de producto: {ex.Message}");
             await JSRuntime.InvokeVoidAsync("alert", "Error al guardar tipo de producto. Por favor, intente nuevamente.");
-            // Muestra un error en la consola y una alerta si hay una excepción durante el guardado.
         }
     }
+
+
+
+    // Método para limpiar el formulario y restablecer el estado.
+    private void ResetForm()
+    {
+        id = 0;
+        categoria = clase = nombre = tipologia = string.Empty;
+        currentTipoProducto = new Dictionary<string, object>();
+        isNewTipoProducto = true;
+        StateHasChanged();
+    }
+
 }
