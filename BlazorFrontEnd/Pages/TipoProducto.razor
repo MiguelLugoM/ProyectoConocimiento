@@ -30,7 +30,7 @@ este componente Blazor se carga y se representa en la página.
                         </a>
                         <!-- Botón que abre el modal para añadir una nueva persona -->
  
-                        <a href="#x" class="btn btn-success" data-bs-toggle="modal" @onclick="PrepareForConsulta">
+                        <a href="#consultarTipoProductoModal" class="btn btn-success" data-bs-toggle="modal" @onclick="PrepareForConsulta">
                             <i class="material-icons">&#xE8B6;</i> <span>Consultar Tipo de producto</span>
                         </a>
                         <!-- Botón que abre el modal para consultar una persona existente -->
@@ -116,6 +116,56 @@ este componente Blazor se carga y se representa en la página.
             </div>
         </div>
     </div>
+
+<!-- Modal para Consultar Tipo de Producto -->
+<div class="modal fade" id="consultarTipoProductoModal" tabindex="-1" role="dialog" aria-labelledby="consultarTipoProductoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="consultarTipoProductoModalLabel">Consultar Tipo de Producto</h5>
+                <!-- Título del modal para consultar un tipo de persona -->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Campos para ingresar el id y mostrar la información del tipo de producto consultada -->
+                <div class="form-group">
+                    <label>id</label>
+                    <input type="text" class="form-control" @bind="consultaId" @bind:event="oninput" />
+                    <!-- Campo para ingresar el id del tipo de producto a consultar -->
+                </div>
+                <div class="form-group">
+                    <label>categoria</label>
+                    <input type="text" class="form-control" @bind="consultaCategoria" readonly />
+                    <!-- Campo para mostrar la categoria del producto consultada, es de solo lectura -->
+                </div>
+                <div class="form-group">
+                    <label>clase</label>
+                    <input type="text" class="form-control" @bind="consultaClase" readonly />
+                    <!-- Campo para mostrar la clase del producto consultada, es de solo lectura -->
+                </div>
+                <div class="form-group">
+                    <label>nombre</label>
+                    <input type="text" class="form-control" @bind="consultaNombre" readonly />
+                    <!-- Campo para mostrar el nombre del producto consultado, es de solo lectura -->
+                </div>
+                <div class="form-group">
+                    <label>tipologia</label>
+                    <input type="text" class="form-control" @bind="consultaTipologia" readonly />
+                    <!-- Campo para mostrar la tipologia del producto consultado, es de solo lectura -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" @onclick="ConsultarTipoProducto">Consultar</button>
+                <!-- Botón para realizar la consulta del tipo de producto ingresado -->
+                <button type="button" class="btn btn-warning" @onclick="ModificarTipoProductoConsultada" disabled="@(!tipoProductoEncontrado)">Modificar</button>
+                <!-- Botón para modificar el tipo de producto consultada si fue encontrada -->
+                <button type="button" class="btn btn-danger" @onclick="EliminarTipoProductoConsultada" disabled="@(!tipoProductoEncontrado)">Eliminar</button>
+                <!-- Botón para eliminar el tipo de producto consultada si fue encontrada -->
+            </div>
+        </div>
+    </div>
+</div>
 
 @code
 {
@@ -247,5 +297,68 @@ este componente Blazor se carga y se representa en la página.
             Console.WriteLine($"Error al eliminar tipo de producto: {ex.Message}");
             await JSRuntime.InvokeVoidAsync("alert", "Error al eliminar el tipo de producto. Por favor, intente nuevamente.");
         }
+    }
+    private async Task ConsultarTipoProducto()
+    {
+        try
+        {
+            var resultado = await ApiService.GetDataAsync($"api/BDCONOCIMIENTO/tipo_producto/id/{consultaId}");
+            if (resultado.Any())
+            {
+                var tipoProductoConsultada = resultado.First();
+                if (tipoProductoConsultada.TryGetValue("id", out var idObj) && idObj is int idInt)
+                {
+                    consultaId = idInt;
+                }
+                consultaCategoria = tipoProductoConsultada.TryGetValue("categoria", out var categoriaObj) ? categoriaObj?.ToString() ?? "" : "";
+                consultaClase = tipoProductoConsultada.TryGetValue("clase", out var claseObj) ? claseObj?.ToString() ?? "" : "";
+                consultaNombre = tipoProductoConsultada.TryGetValue("nombre", out var nombreObj) ? nombreObj?.ToString() ?? "" : "";
+                consultaTipologia = tipoProductoConsultada.TryGetValue("tipologia", out var tipologiaObj) ? tipologiaObj?.ToString() ?? "" : "";
+                tipoProductoEncontrado = true;
+            }
+            else
+            {
+                consultaId = 0;
+                consultaCategoria = "";
+                consultaClase = "";
+                consultaNombre = "";
+                consultaTipologia = "";
+                tipoProductoEncontrado = false;
+                await JSRuntime.InvokeVoidAsync("alert", "No se encontró ningun tipo de producto con ese id.");
+            }
+            StateHasChanged();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al consultar tipo de producto: {ex.Message}");
+            await JSRuntime.InvokeVoidAsync("alert", "Error al consultar el tipo de producto. Por favor, intente nuevamente.");
+        }
+    }
+    private async Task ModificarTipoProductoConsultada()
+    {
+        PrepareForAddOrEdit(new Dictionary<string, object>
+        {
+            ["id"] = consultaId,
+            ["categoria"] = consultaCategoria,
+            ["clase"] = consultaClase,
+            ["nombre"] = consultaNombre,
+            ["tipologia"] = consultaTipologia
+        });
+        await JSRuntime.InvokeVoidAsync("hideModal", "consultarTipoProductoModal");
+        // Prepara los datos consultados para la edición y cierra el modal de consulta.
+    }
+ 
+    private async Task EliminarTipoProductoConsultada()
+    {
+        SetTipoProductoToDelete(new Dictionary<string, object>
+        {
+            ["id"] = consultaId,
+            ["categoria"] = consultaCategoria,
+            ["clase"] = consultaClase,
+            ["nombre"] = consultaNombre,
+            ["tipologia"] = consultaTipologia
+        });
+        await JSRuntime.InvokeVoidAsync("hideModal", "consultarTipoProductoModal");
+        // Prepara los datos consultados para la eliminación y cierra el modal de consulta.
     }
 }
