@@ -94,6 +94,102 @@ este componente Blazor se carga y se representa en la página.
     </div>
 </div>
 
+<!-- Modal para Editar TipoProducto -->
+<div class="modal fade" id="editTipoProductoModal" tabindex="-1" role="dialog" aria-labelledby="editTipoProductoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <EditForm Model="@currentTipoProducto" OnValidSubmit="SaveTipoProducto">
+                <DataAnnotationsValidator />
+                <!-- Valida los campos del formulario usando anotaciones de datos en C# -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTipoProductoModalLabel">Editar TipoProducto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Campos del formulario para ingresar los datos del tipo de producto -->
+                    <div class="form-group">
+                        <label>Id</label>
+                        <InputNumber class="form-control" @bind-Value="id" Disabled="true" />
+                        <ValidationMessage For="@(() => id)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Categoria</label>
+                        <InputText class="form-control" @bind-Value="categoria" />
+                        <ValidationMessage For="@(() => categoria)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Clase</label>
+                        <InputText class="form-control" @bind-Value="clase" />
+                        <ValidationMessage For="@(() => clase)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <InputText class="form-control" @bind-Value="nombre" />
+                        <ValidationMessage For="@(() => nombre)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Tipologia</label>
+                        <InputText class="form-control" @bind-Value="tipologia" />
+                        <ValidationMessage For="@(() => tipologia)" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Añadir TipoProducto -->
+<div class="modal fade" id="addTipoProductoModal" tabindex="-1" role="dialog" aria-labelledby="addTipoProductoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <EditForm Model="@currentTipoProducto" OnValidSubmit="SaveTipoProducto">
+                <DataAnnotationsValidator />
+                <!-- Valida los campos del formulario usando anotaciones de datos en C# -->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTipoProductoModalLabel">Añadir TipoProducto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Campos del formulario para ingresar los datos del tipo de producto -->
+                    <div class="form-group">
+                        <label>Id</label>
+                        <InputNumber class="form-control" @bind-Value="id" />
+                        <ValidationMessage For="@(() => id)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Categoria</label>
+                        <InputText class="form-control" @bind-Value="categoria" />
+                        <ValidationMessage For="@(() => categoria)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Clase</label>
+                        <InputText class="form-control" @bind-Value="clase" />
+                        <ValidationMessage For="@(() => clase)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <InputText class="form-control" @bind-Value="nombre" />
+                        <ValidationMessage For="@(() => nombre)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Tipologia</label>
+                        <InputText class="form-control" @bind-Value="tipologia" />
+                        <ValidationMessage For="@(() => tipologia)" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Añadir</button>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
     <!-- Modal para Eliminar tipo de producto -->
     <div class="modal fade" id="deleteTipoProductoModal" tabindex="-1" role="dialog" aria-labelledby="deleteTipoProductoModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -360,5 +456,69 @@ este componente Blazor se carga y se representa en la página.
         });
         await JSRuntime.InvokeVoidAsync("hideModal", "consultarTipoProductoModal");
         // Prepara los datos consultados para la eliminación y cierra el modal de consulta.
+    }
+    private async Task SaveTipoProducto()
+    {
+        try
+        {
+            currentTipoProducto["id"] = id;
+            currentTipoProducto["categoria"] = categoria;
+            currentTipoProducto["clase"] = clase;
+            currentTipoProducto["nombre"] = nombre;
+            currentTipoProducto["tipologia"] = tipologia;
+            // Actualiza 'currentTipoProducto' con los valores actuales de los campos de entrada.
+ 
+            bool success;
+            if (isNewTipoProducto)
+            {
+                success = await ApiService.AddEntityAsync("api/BDCONOCIMIENTO/tipo_producto", currentTipoProducto);
+                await LoadTipoProducto();
+               
+                // Si estamos añadiendo una nueva tipo producto, llama a la API para añadir la nueva tipo de producto.
+            }
+            else
+            {
+                success = await ApiService.EditEntityAsync("api/BDCONOCIMIENTO/tipo_producto/id", id.ToString(), currentTipoProducto);
+                await LoadTipoProducto();
+                // Si estamos editando un tipo de producto existente, llama a la API para editarla.
+            }
+ 
+            if (success)
+            {
+ 
+                await JSRuntime.InvokeVoidAsync("hideModal", "addTipoProductoModal");
+                // Si la operación tiene éxito, cierra el modal.
+ 
+                await LoadTipoProducto();
+                // Recarga la lista de tipo de producto para reflejar los cambios.
+
+                id = 0;
+                categoria = clase = nombre = tipologia = string.Empty;
+                currentTipoProducto = new Dictionary<string, object>();
+                isNewTipoProducto = true;
+                // Limpia los campos del formulario y restablece el estado.
+ 
+                StateHasChanged();
+               
+                // Fuerza la actualización de la UI.
+               
+               await LoadTipoProducto();
+ 
+                await JSRuntime.InvokeVoidAsync("alert", "Operación realizada con éxito1.");
+               
+                // Muestra un mensaje de éxito al usuario.
+            }
+            else
+            {
+                await JSRuntime.InvokeVoidAsync("alert", "Error al guardar el tipo de producto. Por favor, intente nuevamente.");
+                // Si la operación falla, muestra un mensaje de error.
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error al guardar tipo de producto: {ex.Message}");
+            await JSRuntime.InvokeVoidAsync("alert", "Error al guardar tipo de producto. Por favor, intente nuevamente.");
+            // Muestra un error en la consola y una alerta si hay una excepción durante el guardado.
+        }
     }
 }
