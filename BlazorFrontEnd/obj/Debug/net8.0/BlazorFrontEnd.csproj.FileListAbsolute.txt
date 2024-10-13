@@ -6184,7 +6184,17 @@ C:\Users\mlugo\Desktop\ML-Universidad\Programacion de Software\proyectosVSCODE\B
 C:\Users\mlugo\Desktop\ML-Universidad\Programacion de Software\proyectosVSCODE\BlazorFrontEnd\obj\Debug\net8.0\refint\BlazorFrontEnd.dll
 C:\Users\mlugo\Desktop\ML-Universidad\Programacion de Software\proyectosVSCODE\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.pdb
 C:\Users\mlugo\Desktop\ML-Universidad\Programacion de Software\proyectosVSCODE\BlazorFrontEnd\obj\Debug\net8.0\ref\BlazorFrontEnd.dll
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.csproj.AssemblyReference.cache
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.AssemblyInfoInputs.cache
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.AssemblyInfo.cs
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.csproj.CoreCompileInputs.cache
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.sourcelink.json
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\BlazorFrontEnd.pdb
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\BlazorFrontEnd.wasm
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.js
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.8.98zrut5hlj.js
@@ -6385,19 +6395,6 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\n
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.wasm
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.XDocument.wasm
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\WindowsBase.wasm
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.8.3rhzice509.js.gz
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\icudt_EFIGS.dat.gz
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.wasm.gz
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.8.98zrut5hlj.js.gz
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.map.gz
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.gz
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js.gz
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\icudt_no_CJK.dat.gz
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\icudt_CJK.dat.gz
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map.gz
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\blazor.boot.json
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\BlazorFrontEnd.pdb
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\BlazorFrontEnd.wasm
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.InteropServices.JavaScript.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Memory.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Text.Encoding.Extensions.wasm.gz
@@ -6412,6 +6409,7 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\n
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Xml.Linq.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.IO.FileSystem.Watcher.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.IO.FileSystem.AccessControl.wasm.gz
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.8.0.8.3rhzice509.js.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Private.Uri.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Primitives.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Private.CoreLib.wasm.gz
@@ -6426,6 +6424,7 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\n
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Net.Mail.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.ObjectModel.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XmlSerializer.wasm.gz
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\icudt_EFIGS.dat.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Text.RegularExpressions.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.FileProviders.Physical.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Resources.ResourceManager.wasm.gz
@@ -6433,6 +6432,7 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\n
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Globalization.Extensions.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.ValueTuple.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Win32.Primitives.wasm.gz
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Emit.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Collections.Concurrent.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.FileProviders.Abstractions.wasm.gz
@@ -6442,11 +6442,13 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\n
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Net.Requests.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Configuration.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.OpenSsl.wasm.gz
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.native.8.0.8.98zrut5hlj.js.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Globalization.Calendars.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Numerics.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Text.Encodings.Web.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.DispatchProxy.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XmlDocument.wasm.gz
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.runtime.js.map.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.IO.FileSystem.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Net.Security.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\Microsoft.JSInterop.wasm.gz
@@ -6461,6 +6463,7 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\n
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Diagnostics.Tools.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Serialization.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.Cng.wasm.gz
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.IO.Compression.ZipFile.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.IO.IsolatedStorage.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Collections.wasm.gz
@@ -6470,6 +6473,7 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\n
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.ComponentModel.EventBasedAsync.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\BlazorFrontEnd.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Resources.Writer.wasm.gz
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\blazor.webassembly.js.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Data.Common.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Xml.XPath.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Collections.Immutable.wasm.gz
@@ -6485,6 +6489,7 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\n
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Extensions.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Resources.Reader.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\mscorlib.wasm.gz
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\icudt_no_CJK.dat.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Net.Sockets.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Private.Xml.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Net.Primitives.wasm.gz
@@ -6530,6 +6535,7 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\n
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Security.AccessControl.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Transactions.Local.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Linq.wasm.gz
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\icudt_CJK.dat.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Linq.Queryable.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Private.Xml.Linq.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Security.Cryptography.Primitives.wasm.gz
@@ -6552,6 +6558,7 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\n
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Runtime.Serialization.Primitives.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Reflection.Emit.Lightweight.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Data.DataSetExtensions.wasm.gz
+C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\dotnet.js.map.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Extensions.Configuration.Json.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.Formats.Tar.wasm.gz
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\wwwroot\_framework\System.IO.Compression.wasm.gz
@@ -6795,13 +6802,6 @@ C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\n
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\icudt_CJK.dat
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\icudt_EFIGS.dat
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\bin\Debug\net8.0\icudt_no_CJK.dat
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.csproj.AssemblyReference.cache
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.AssemblyInfoInputs.cache
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.AssemblyInfo.cs
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.csproj.CoreCompileInputs.cache
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\BlazorFrontEnd.sourcelink.json
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Authorization.wasm
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.wasm
 C:\Users\mlugo\Desktop\ProyectoProgramacionDeSoftware\BlazorFrontEnd\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.Components.Forms.wasm
